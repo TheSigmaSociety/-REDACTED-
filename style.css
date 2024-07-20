@@ -184,3 +184,22 @@ body{
     position:absolute;
     z-index:-1;
 }
+
+#img3{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    z-index:-1;
+    
+}
+
+.custom-textbox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
