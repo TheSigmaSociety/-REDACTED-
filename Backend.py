@@ -38,11 +38,21 @@ def scareSeniors():
     result = request.get_json()  # {"name":"walter"}
     with open(userdataPath,'r') as file:
         data = json.load(file)
-    healthOfPerson = json.dumps(data[result['name']])
+    healthOfPerson = data['name']
     prompt = "The user input consists of a JSON with different health indicators for a senior citizen, such as age, amount of exercise per week, and heart disease history. Your goal is to provide a grave and serious warning to the user senior citizen about future threats to their health and potentially life. The goal is to induce fear into the senior citizens so that they will resume their excersizing and activities in order to improve their health overall. Limit your response to 500 characters ONLY. DO NOT GO ABOVE 500 CHARACTERS."
     return jsonify(response=openAiRequest(prompt, healthOfPerson))
 
-
+@app.route('/login', methods=['GET'])
+def login():
+    result = request.get_json()  # {"name":"walter", "phone":"1234567890}
+    with open(userdataPath,'r') as file:
+        data = json.load(file)
+    if result['name'] in data:
+        if result['phone'] == data[result['name']]['phone']:
+            print("har har har har har har har har har har har har")
+            return jsonify({"status":"success"})
+        return jsonify({"status":"wrong phone number"})
+    return jsonify({"status":"wrong name"})
 
 if __name__ == '__main__':
     app.run()
