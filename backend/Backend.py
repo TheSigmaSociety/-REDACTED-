@@ -43,11 +43,11 @@ def scareSeniors():
 
 @app.route('/login', methods=['GET'])
 def login():
-    result = request.get_json()  # {"name":"walter", "phone":"1234567890}
+    result = request.args.get('total').split(",")  # "name,phone"
     with open(userdataPath,'r') as file:
         data = json.load(file)
-    if result['name'] in data:
-        if result['phone'] == data[result['name']]['phone']:
+    if result[0] in data:
+        if result[1] == data[result[0]]['phone']:
             print("har har har har har har har har har har har har")
             return jsonify({"status":"success"})
         return jsonify({"status":"wrong phone number"})
