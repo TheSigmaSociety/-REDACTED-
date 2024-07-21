@@ -23,11 +23,8 @@ function get(url,user) {
         button = document.getElementById("logInButton")
         console.log(data)
         if(data['status'] == "success")  {
-            window.location.assign("http://127.0.0.1:5500/scare.html")
-            console.log(userName.value)
             document.cookie = "username=" + userName.value + "; path=/";
-
-
+            window.location.assign("http://127.0.0.1:5500/scare.html")
         } 
     })
 }

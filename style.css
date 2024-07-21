@@ -573,3 +573,42 @@ body{
     position:absolute;
     z-index:-1;
 }
+
+.transparentThing{
+    background-color:#46536c;
+    z-index:4;
+    width:400px;
+    height:400px;
+    position:absolute;
+    border-radius:5px;
+    margin:20px;
+    opacity:0.5;
+}
+
+#leoLocator{
+    position:absolute;
+    margin-top:100px;
+    margin-left:35px;
+    z-index:5;
+}
+
+#findPeople{
+    background-color:#3c4f68;
+    position:absolute;
+    border-radius:5px;
+    color:#00eaff;
+    margin-top:25px;
+    margin-left:25px;
+    z-index:6;
+    height:37px;
+    width:300px;  
+    transition:0.5s;  
+}
+
+#findPeople:hover{
+    height:38px;
+    width:310px;
+    background-color:#4a78b5;
+    color:#00f2ff;
+
+}
