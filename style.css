@@ -116,8 +116,8 @@ body{
 
 .logIn {
     display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    align-items: center; 
+    justify-content: center; 
     width: 25%;
     background-color: #46536c;
     padding: 10px;
@@ -130,9 +130,9 @@ body{
 
 .logInButtons {
     display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    align-items: center; /* Center horizontally within .logIn */
-    justify-content: center; /* Center vertically within .logIn */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
@@ -304,4 +304,27 @@ body{
     color:#71d3f1;
     margin-top:500px;
 
+}
+
+#img4{
+    width:75vw;
+    height:100vh;
+    position:absolute;
+    z-index:-1;
+    right:0;
+}
+
+
+.signUpThings{
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    width: 25%;
+    background-color: #46536c;
+    padding: 10px;
+    overflow: hidden;
+    z-index: -1;
+    height: 100%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    height:97.5vh;
 }
