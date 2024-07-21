@@ -12,7 +12,7 @@ function get(url) {
         for (const leoKey in data) {
             const location = data[leoKey]
             city = (location[1].split(",").slice(2))
-            leo.innerHTML += location[0] + " is living in: " + city +  "<br>"
+            leo.innerHTML += location[0] + " is living in: " + city +  "<br> <br>"
         }
     })
 }

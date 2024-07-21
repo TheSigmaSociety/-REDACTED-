@@ -58,6 +58,16 @@ function getLocation() {
         loc.innerText = "Geolocation is not supported by this browser.";
     }
 }
+
+function openBar(){
+    // document.getElementById("navBar").style.width = "250px";
+    document.getElementById("navBar").classList.add("open");
+}
+
+function closeBar(){
+    // document.getElementById("navBar").style.width = "0";
+    document.getElementById("navBar").classList.remove("open");
+}
 function showPosition(position) {
     Address = position
     loc.innerText = "Address: " + (position)
