@@ -1,13 +1,4 @@
 {
-    "Joe Biden": {
-        "age": "100",
-        "steps": "6900",
-        "location": "6101, 147th Court Northeast, Sheffield Greens, Redmond, King County, Washington, 98052, United States",
-        "heartdisease": true,
-        "lat": 47.6616316,
-        "long": -122.1454163,
-        "phone": "111-111-1111"
-    },
     "Donald Trump": {
         "age": "100",
         "steps": "6900",
@@ -25,5 +16,14 @@
         "lat": 51.6616316,
         "long": -120.1454163,
         "phone": "333-333-3333"
+    },
+    "Joe Biden": {
+        "age": "80",
+        "steps": "4621",
+        "location": "Hampton Greens apartment office, 4747, 148th Avenue Northeast, Bellevue, King County, Washington, 98007, United States",
+        "heartdisease": true,
+        "lat": 47.653244,
+        "long": -122.143611,
+        "phone": "111-111-1111"
     }
 }

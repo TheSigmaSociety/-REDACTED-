@@ -174,8 +174,8 @@ body{
 #usernameBox,
 #phoneBox{
     border-radius:10px;
-    height:15px; 
-    width:250px;
+    height:11px; 
+    width:200px;
     margin:10px;
     padding:10px;
     display:flex;
@@ -194,11 +194,6 @@ body{
     margin-top:-200px;
 }
 
-#usernameBox:hover,
-#phoneBox:hover{
-    height:16px;
-    width:260px;
-}
 
 #phoneBox{
     margin-top:-50px;

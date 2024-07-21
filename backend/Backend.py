@@ -11,7 +11,7 @@ url = "localhost:5000"
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY") 
 )
-userdataPath = "backend/data.json" #wait what isint it data.json or am i high
+userdataPath = "backend/data.json" 
 
 def openAiRequest(prompt, input):
     chat_completion = client.chat.completions.create(
