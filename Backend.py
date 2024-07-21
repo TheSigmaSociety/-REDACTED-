@@ -9,10 +9,9 @@ CORS(app)
 load_dotenv()
 url = "localhost:5000"
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY") #freddy fazbear har har har har har har
+    api_key=os.getenv("OPENAI_API_KEY") 
 )
 userdataPath = "data.json" #wait what isint it data.json or am i high
-#format:
 
 def openAiRequest(prompt, input):
     chat_completion = client.chat.completions.create(
