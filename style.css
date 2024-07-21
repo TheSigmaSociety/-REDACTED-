@@ -279,20 +279,36 @@ body{
 }
 
 .output-area {
-    width: 35%;
-    height: 700px;
-    padding: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-    border: 1px solid #ccc;
+    width: 26%; 
+    height: 548px; 
+    padding: 10px; 
+    font-size: 16px; 
+    color:#00eaff; 
+    line-height: 1.5; 
+    border: 2px solid #00f2ff; 
     border-radius: 5px;
     resize: vertical; 
     box-sizing: border-box; 
     position: absolute; 
-    top: 50vh; 
+    top: 25vh; 
     left: 0;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     transition: border-color 0.2s ease-in-out; 
+    background-color: #4a78b588;
+}
+
+.output-area-title {
+    border: 2px solid #00f2ff;
+    position: absolute;
+    left: 0;
+    top: 10vh; 
+    width: 24.5%; 
+    padding: 10px;
+    font-size: 20px; 
+    color: #00eaff; 
+    background-color: #4a78b588; 
+    text-align: left; 
+    border-radius: 5px 5px 0 0; 
 }
 
 #signUpLink{
