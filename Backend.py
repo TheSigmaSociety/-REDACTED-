@@ -23,7 +23,7 @@ def openAiRequest(prompt, input):
     return chat_completion.choices[0].message.content
 
 @app.route('/savedata', methods=['POST'])
-def saveData(): # {"name": {"age": n, "steps": n, "location": n, "heartdisease": n}}
+def saveData(): # {"name": {"age": n, "steps": n, "location": n, "heartdisease": bool}}
     send = request.get_json()
     with open(userdataPath, 'r') as f:
         filedata = json.load(f)
@@ -40,7 +40,7 @@ def scareSeniors():
         data = json.load(file)
     healthOfPerson = data['name']
     prompt = "The user input consists of a JSON with different health indicators for a senior citizen, such as age, amount of exercise per week, and heart disease history. Your goal is to provide a grave and serious warning to the user senior citizen about future threats to their health and potentially life. The goal is to induce fear into the senior citizens so that they will resume their excersizing and activities in order to improve their health overall. Limit your response to 500 characters ONLY. DO NOT GO ABOVE 500 CHARACTERS."
-    return jsonify(response=openAiRequest(prompt, healthOfPerson))
+    return jsonify({"response": openAiRequest(prompt, healthOfPerson)})
 
 @app.route('/login', methods=['GET'])
 def login():
