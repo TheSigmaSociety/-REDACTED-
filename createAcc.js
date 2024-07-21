@@ -49,7 +49,7 @@ function showPosition(position) {
 
 //gets the adress based on latatude and longatude
 function getAddress(lat, lon) {
-    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;//har industries
     response = ""
     fetch(url)
         .then(response => response.json())
