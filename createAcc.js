@@ -32,6 +32,7 @@ function post(url,content) {
 		headers: {"Content-Type":"application/json"},
 		body: JSON.stringify(content)
 	}).then(response => response.json()).then(data => {
+        if(data['status'] == "posted")  window.location.assign("http://127.0.0.1:5500/logIn.html")
 		return (data)
 	})
 }
