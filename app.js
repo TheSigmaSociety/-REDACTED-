@@ -33,7 +33,7 @@ function closeBar(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const name = 'walter'; 
+    const name = 'david lin'; 
     fetch(`http://localhost:5000/scare?name=${encodeURIComponent(name)}`, {
         method: 'GET', 
         headers: {

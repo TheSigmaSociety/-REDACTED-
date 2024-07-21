@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class = "mrStave">
-        <img id = "img3" src="images\Screenshot 2024-07-20 152248.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mrStave">
+      <img id="img3" src="images\Screenshot 2024-07-20 152248.png" />
     </div>
-    <div id="textbox" class="custom-textbox"></div>
-   
 
-</body>
+    <textarea
+      id="textbox"
+      class="output-area"
+      placeholder="Loading API Data..."
+      readonly
+    ></textarea>
 
-<script src="app.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+  <script src="app.js"></script>
+</html>
