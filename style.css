@@ -506,4 +506,63 @@ body{
 
 }
 
+.nextPage{
+    position:absolute;
+    display:flex;
+    align-items:center;
+    right:0;
+    margin-right:10px;
+    margin-top:700px;
+    background-color:#3c4f68;
+    width:500px;
+    height:20px;
+    border-radius:5px;
+    transition:0.5s;
+}
 
+.nextPage:hover{
+    width:510px;
+    height:21px;
+    color:#13c7d7;
+    background-color:#4a78b5;
+}
+
+#toGooglePage{
+    text-decoration:none;
+    color:#00f2ff;
+    margin-left:10px;
+    
+}
+
+.mapContainer{
+    display:flex;
+    position:absolute;
+    align-items:center;
+
+}
+
+#mapLabel{
+    margin-top:100px;
+}
+
+#map{
+    margin-top:120px;
+    margin-left:930px; 
+}
+
+.rect{
+    display:flex;
+    justify-content:center;
+    font-family: 'Raleway';
+    text-shadow: 2px 2px #000000;
+    background-color: #46536c;
+    width:40vw;
+    height:100vh;
+    float:right;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,1);
+}
+
+#mapText{
+    margin-top:10px;
+    text-align:center;
+}
