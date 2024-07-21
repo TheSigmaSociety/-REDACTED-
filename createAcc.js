@@ -10,7 +10,7 @@ heart = document.getElementById("heartDiseaseCheck")
 phone = document.getElementById("phoneNum")
 latitude = -1
 longitude = -1
-ageOut.innerHTML = -1;
+ageOut.innerHTML = 50;
 
 ageInput.oninput = function() {
     ageOut.innerHTML = this.value;
