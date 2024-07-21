@@ -41,7 +41,11 @@ function get(url,content) {
 		headers: {"Content-Type":"application/json"},
 		body: JSON.stringify(content)
 	}).then(response => response.json()).then(data => {
-		return (data)
+		//return (data) //{'status':'posted/notposted'}
+        if(data['status'] == 'posted') {
+            console.log("bruh")
+            window.location.assign("http://127.0.0.1:5500/logIn.html")
+        }
 	})
 }
 
@@ -100,5 +104,6 @@ function submitToServer() {
     x[nam.value] = {"age": age, "steps": step, "location": Address, "heartdisease": hasHeartDisease,"lat":latitude,"long":longitude,"phone":phoneNumber};
     res = post("/savedata",x)
     result.innerHTML = ""
+
     // post(IP + "/savedata",{n:{}})
 }
