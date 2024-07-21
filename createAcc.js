@@ -8,6 +8,8 @@ steps = document.getElementById("dailySteps");
 nam = document.getElementById("name");
 heart = document.getElementById("heartDiseaseCheck")
 phone = document.getElementById("phoneNum")
+latitude = -1
+longitude = -1
 ageOut.innerHTML = -1;
 
 ageInput.oninput = function() {
@@ -49,6 +51,8 @@ function showPosition(position) {
 
 //gets the adress based on latatude and longatude
 function getAddress(lat, lon) {
+    latitude = lat
+    longitude = lon
     const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
     response = ""
     fetch(url)
@@ -81,9 +85,10 @@ function submitToServer() {
     if(Address == "") result.innerHTML += "No address inputted<br>";
     if(phoneNumber == "") result.innerHTML += "No phone number imputted<br>";
     if(step == "") result.innerHTML += "Step amount not imputted <br>";
+    
     if(result.innerHTML != "") return;
     x = {}
-    x[nam.value] = {"age": age, "steps": step, "location": Address, "heartdisease": hasHeartDisease};
+    x[nam.value] = {"age": age, "steps": step, "location": Address, "heartdisease": hasHeartDisease,"lat":latitude,"long":longitude,"phone":phoneNumber};
     res = post("/savedata",x)
     result.innerHTML = ""
     console.log(res)
