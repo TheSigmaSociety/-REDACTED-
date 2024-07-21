@@ -9,6 +9,7 @@ function get(url) {
         }
 	}).then(response => response.json()).then(data => {
         leo = document.getElementById("leoLocator")
+        leo.innerHTML = "";
         for (const leoKey in data) {
             const location = data[leoKey]
             city = (location[1].split(",").slice(2))
@@ -17,6 +18,7 @@ function get(url) {
     })
 }
 function getNear() {
+
     get(`/leoLianLocator?name=${logInName}`)
 }
 
