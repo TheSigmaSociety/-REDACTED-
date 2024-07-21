@@ -11,7 +11,7 @@ url = "localhost:5000"
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY") 
 )
-userdataPath = "data.json" #wait what isint it data.json or am i high
+userdataPath = "backend/data.json" #wait what isint it data.json or am i high
 
 def openAiRequest(prompt, input):
     chat_completion = client.chat.completions.create(
@@ -34,11 +34,11 @@ def saveData(): # {"name": {"age": n, "steps": n, "location": n, "heartdisease":
     
 @app.route('/scare', methods=['GET'])
 def scareSeniors():
-    result = request.get_json()  # {"name":"walter"}
+    name = request.args.get('name')  # {"name":"walter"}
     with open(userdataPath,'r') as file:
         data = json.load(file)
-    healthOfPerson = data['name']
-    prompt = "The user input consists of a JSON with different health indicators for a senior citizen, such as age, amount of exercise per week, and heart disease history. Your goal is to provide a grave and serious warning to the user senior citizen about future threats to their health and potentially life. The goal is to induce fear into the senior citizens so that they will resume their excersizing and activities in order to improve their health overall. Limit your response to 500 characters ONLY. DO NOT GO ABOVE 500 CHARACTERS."
+    healthOfPerson = json.dumps(data[name])
+    prompt = "The user input consists of a JSON with different health indicators for a senior citizen, such as age, amount of exercise (steps) per week, and heart disease history. Your goal is to provide a grave and serious warning to the user senior citizen about future threats to their health and potentially life. The goal is to induce fear into the senior citizens so that they will resume their excersizing and activities in order to improve their health overall. Limit your response to 500 characters ONLY. DO NOT GO ABOVE 500 CHARACTERS and USE BULLET POINTS instead of a long paragraph."
     return jsonify({"response": openAiRequest(prompt, healthOfPerson)})
 
 @app.route('/login', methods=['GET'])
