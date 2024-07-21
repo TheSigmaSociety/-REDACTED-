@@ -116,34 +116,32 @@ body{
 
 .logIn {
     display: flex;
-    align-items: center;
-    position: fixed;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
     width: 25%;
-    background-color:#46536c;
+    background-color: #46536c;
     padding: 10px;
     overflow: hidden;
-    z-index: -1; 
-    justify-content: space-between;
-    margin-left:0px;
-    height:100%;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
-
+    z-index: -1;
+    height: 100%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    height:97.5vh;
 }
 
-.logInButtons{
+.logInButtons {
     display: flex;
-    align-items: center;
-    position: fixed;
-    justify-content:center;
-    bottom: 100px;
-    width: 50%;
-    border-radius:10px;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center horizontally within .logIn */
+    justify-content: center; /* Center vertically within .logIn */
+    border-radius: 10px;
     padding: 10px;
     overflow: hidden;
-    z-index: 4; 
-    height:500px;
-    width:400px;
-    margin-left:0px;
+    z-index: 4;
+    height: 500px;
+    width: 400px;
+    color: #00eaff;
+    background-color: transparent;
+    transition: 0.5s;
 }
 
 #logInButton{
