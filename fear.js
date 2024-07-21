@@ -1,4 +1,5 @@
 logInName = (document.cookie).slice(9) //remove the "username=" part of the cookie
+console.log(logInName)
 
 document.addEventListener('DOMContentLoaded', function() {
     const name = logInName;

@@ -10,7 +10,8 @@ heart = document.getElementById("heartDiseaseCheck")
 phone = document.getElementById("phoneNum")
 latitude = -1
 longitude = -1
-
+logInName = (document.cookie).slice(9) //remove the "username=" part of the cookie
+console.log(logInName)
 ageOut.innerHTML = 50;
 
 ageInput.oninput = function() {

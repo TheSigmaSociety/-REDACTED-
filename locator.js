@@ -1,4 +1,5 @@
 logInName = (document.cookie).slice(9) //remove the "username=" part of the cookie
+console.log(logInName)
 IP = "http://127.0.0.1:5000"
 function get(url) {
     fetch(IP + url, {
