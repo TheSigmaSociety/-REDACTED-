@@ -7,7 +7,7 @@
     --element:#cbeef3;
     --titleBar:#f26a8d;
     --mainPageItem:rgb(167, 93, 93);
-    --sideBar:#46536c;
+    --sideBar:#4b638f;
 }
 
 body{
@@ -36,7 +36,7 @@ body{
     padding-top:60px;
     transition:0.5s;
     transform: translateX(-250px);
-    z-index:4;
+    z-index:10;
     right:0;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
 
@@ -46,7 +46,7 @@ body{
     padding:8px 8px 8px 32px;
     text-decoration:none;
     font-size:25px;
-    color: #4a78b5; /*temp color*/
+    color: var(--font); /*temp color*/
     display:block;
     transition:0.3s;
     font-family: 'Raleway';
@@ -68,7 +68,7 @@ body{
 
 #navOpenButton{
     background-color:var(--element);
-    color:var(--font2);
+    color:#000000;
     font-family: 'Raleway';
     position:absolute;
     margin-left:15px;
@@ -81,7 +81,7 @@ body{
     font-size:25px;
     transition:0.5s;
     z-index:2;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.8);
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.8);
 
 }
 
@@ -95,7 +95,7 @@ body{
 
 .links:hover {
     transform: scale(1.15);
-    color: var(--font);
+    color: var(--font2);
 }
 
 .links{
@@ -114,18 +114,104 @@ body{
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,1);
 }
 
-.logInDiv{
-    display:flex;
+.logIn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 25%;
+    background-color:#46536c;
+    padding: 10px;
+    overflow: hidden;
+    z-index: -1; 
+    justify-content: space-between;
+    margin-left:0px;
+    height:100%;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+
+}
+
+.logInButtons{
+    display: flex;
+    align-items: center;
+    position: fixed;
     justify-content:center;
+    bottom: 100px;
+    width: 50%;
+    border-radius:10px;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 4; 
+    height:500px;
+    width:400px;
+    margin-left:0px;
+}
+
+#logInButton{
     display:flex;
+    align-items:center;
     justify-content:center;
-    font-family: 'Raleway';
-    text-shadow: 2px 2px #000000;
-    background-color: #46536c;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,1);
-    width:100vw;
-    height:100vh;
-    z-index:4;
+    position:absolute;
+    font-size:25px;
+    margin-top:100px;
+    width:150px;
+    height:50px;
+    color:#00eaff;
+    background-color: transparent;
+    border-radius:5px;
+    transition:0.5s;
+}
+
+#logInButton:hover{
+    color:#71d3f1;
+    width:160px;
+    height:51px;
+    background-color:#4a78b5;
+}
+
+
+::placeholder{
+    color:#0ad0e2df;
+}
+
+#usernameBox,
+#phoneBox{
+    border-radius:10px;
+    height:15px; 
+    width:250px;
+    margin:10px;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:absolute;
+    font-size:25px;
+    transition:0.5s;
+    background-color:transparent;
+    color:#00eaff;
+
+}
+
+#usernameBox{
+    margin-right:15px;
+    margin-top:-200px;
+}
+
+#usernameBox:hover,
+#phoneBox:hover{
+    height:16px;
+    width:260px;
+}
+
+#phoneBox{
+    margin-top:-50px;
+    margin-right:15px;
+    
+}
+
+
+#logInLabel{
+    margin-top:-375px;
+    font-size:50px;
 }
 
 #title{
