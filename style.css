@@ -591,6 +591,7 @@ body{
     margin-top:250px;
     margin-left:35px;
     z-index:5;
+    width:350px;
 }
 
 #findPeople{
@@ -613,3 +614,4 @@ body{
     color:#00f2ff;
 
 }
+
