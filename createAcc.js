@@ -10,14 +10,21 @@ heart = document.getElementById("heartDiseaseCheck")
 phone = document.getElementById("phoneNum")
 latitude = -1
 longitude = -1
-console.log(document.cookie)
 
 ageOut.innerHTML = 50;
 
 ageInput.oninput = function() {
     ageOut.innerHTML = this.value;
 }
+function openBar(){
+    // document.getElementById("navBar").style.width = "250px";
+    document.getElementById("navBar").classList.add("open");
+}
 
+function closeBar(){
+    // document.getElementById("navBar").style.width = "0";
+    document.getElementById("navBar").classList.remove("open");
+}
 function post(url,content) {
     fetch(IP + url, {
 		method: "POST",
