@@ -82,13 +82,12 @@ function submitToServer() {
     phoneNumber = phone.value
     result = document.getElementById("resp")
     result.innerHTML = "";
-    if(nam.value == "") result.innerHTML += "No name inputted<br>";
-    if(age == -1) result.innerHTML += "No age inputted<br>";
-    if(Address == "") result.innerHTML += "No address inputted<br>";
-    if(phoneNumber == "") result.innerHTML += "No phone number imputted<br>";
-    if(step == "") result.innerHTML += "Step amount not imputted <br>";
+    if(nam.value == "") return;
+    if(age == -1) return;
+    if(Address == "") return;
+    if(phoneNumber == "") return;
+    if(step == "") return;
     
-    if(result.innerHTML != "") return;
     x = {}
     x[nam.value] = {"age": age, "steps": step, "location": Address, "heartdisease": hasHeartDisease,"lat":latitude,"long":longitude,"phone":phoneNumber};
     res = post("/savedata",x)
