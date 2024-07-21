@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "getLocation()">put your location on your account </button>
+    <div id="currentLocation">N/A</div>
+
+    <div class="numbers">
+        
+        <p>Age: <input type="range" min="69" max="420" value="" class="slider" id="Age"> <span id="ageOut"></span></p>
+    </div>
+    <p>Do you have ligma? <input type="checkbox" id = "heartDiseaseCheck"></p>
+    <p>Average steps you take per day:</p> 
+    <input type="number" id="dailySteps" name="quantity" min="0">
+    <p>Name: <input type = "text" id = "name"></p>
+
+    <label for="phone">Enter your phone number:</label>
+    <input type="text" id="phoneNum" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>    
+    <button onclick = "submitToServer()">Submit</button>
+
+    <div id = "resp"></div>
+</body>
+<script src = "app.js"></script>    
+
+</html>
