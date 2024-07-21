@@ -10,6 +10,8 @@ heart = document.getElementById("heartDiseaseCheck")
 phone = document.getElementById("phoneNum")
 latitude = -1
 longitude = -1
+console.log(document.cookie)
+
 ageOut.innerHTML = 50;
 
 ageInput.oninput = function() {
@@ -91,6 +93,5 @@ function submitToServer() {
     x[nam.value] = {"age": age, "steps": step, "location": Address, "heartdisease": hasHeartDisease,"lat":latitude,"long":longitude,"phone":phoneNumber};
     res = post("/savedata",x)
     result.innerHTML = ""
-    console.log(res)
     // post(IP + "/savedata",{n:{}})
 }

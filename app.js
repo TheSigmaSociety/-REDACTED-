@@ -1,5 +1,8 @@
 userName = document.getElementById("usernameBox")
+console.log(userName)
 phoneNum = document.getElementById("phoneBox")
+logInName = (document.cookie).slice(9) //remove the "username=" part of the cookie
+console.log(logInName)
 IP = "http://127.0.0.1:5000"
 function post(url,content) {
     fetch(IP + url, {
@@ -10,7 +13,7 @@ function post(url,content) {
 		return (data)
 	})
 }
-function get(url) {
+function get(url,user) {
     fetch(IP + url, {
 		method: "GET",
         headers: {
@@ -18,8 +21,13 @@ function get(url) {
         }
 	}).then(response => response.json()).then(data => {
         button = document.getElementById("logInButton")
+        console.log(data)
+        if(data['status'] == "success")  {
+            console.log(userName.value)
+            document.cookie = "username=" + userName.value + "; path=/";
 
-        console.log(data['status'])
+
+        } 
     })
 }
 function openBar(){
@@ -33,7 +41,8 @@ function closeBar(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const name = 'david lin'; 
+    const name = 'david lin';
+     
     fetch(`http://localhost:5000/scare?name=${encodeURIComponent(name)}`, {
         method: 'GET', 
         headers: {
@@ -50,6 +59,5 @@ function log() {
     button = document.getElementById("logInButton")
     user = userName.value
     phone = phoneNum.value
-    get(`/login?total=${encodeURIComponent(user + "," + phone)}`)
-    
+    get(`/login?total=${encodeURIComponent(userName.value + "," + phone,(user))}`)
 }
