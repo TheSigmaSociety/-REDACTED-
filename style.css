@@ -291,3 +291,14 @@ body{
     color: #333;
     position: absolute;
 }
+
+#signUpLink{
+    margin:10px;
+    padding:10px;
+    position:absolute;
+    display:flex;
+    font-size:20px;
+    color:#71d3f1;
+    margin-top:500px;
+
+}
