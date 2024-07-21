@@ -1,5 +1,7 @@
+logInName = (document.cookie).slice(9) //remove the "username=" part of the cookie
+
 document.addEventListener('DOMContentLoaded', function() {
-    const name = 'david lin';
+    const name = logInName;
      
     fetch(`http://localhost:5000/scare?name=${encodeURIComponent(name)}`, {
         method: 'GET', 
