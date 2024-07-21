@@ -265,10 +265,11 @@ body{
 }
 
 #img2{
-    width:100vw;
+    width:75vw;
     height:100vh;
     position:absolute;
     z-index:-1;
+    right:0;
 }
 
 #img3{
