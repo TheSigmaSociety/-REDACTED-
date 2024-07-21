@@ -1,1 +1,5 @@
-{"david lin": {"age": 15, "steps": 8000, "location": "redmond, wa", "heartdisease": true}, "har indsutries ceo ": {"age": "420", "steps": "69", "location": "11701, Northeast 105th Lane, Kirkland, King County, Washington, 98033, United States", "heartdisease": true}}
+{
+    "david lin": {"age": 15, "steps": "8000", "location": "10419, 115th Pl NE, Kirkland, Washingotn, 98033,United States", "heartdisease": true,"lat":"55","long":"69"}, 
+    "har indsutries ceo ": {"age": "420", "steps": "69", "location": "11701, Northeast 105th Lane, Kirkland, King County, Washington, 98033, United States", "heartdisease": true,"lat":30,"long":69},
+    "sharma":{"age":60,"steps":420,"location":"redmond, wa","heartdisease":false,"lat":"40","long":"30"}
+}

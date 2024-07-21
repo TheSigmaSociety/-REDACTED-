@@ -10,7 +10,7 @@ function post(url,content) {
 		return (data)
 	})
 }
-function get(url,content) {
+function get(url) {
     fetch(IP + url, {
 		method: "GET",
         headers: {
@@ -19,7 +19,7 @@ function get(url,content) {
 	}).then(response => response.json()).then(data => {
         button = document.getElementById("logInButton")
 
-        console.log(data)
+        console.log(data['status'])
     })
 }
 function openBar(){
@@ -50,6 +50,6 @@ function log() {
     button = document.getElementById("logInButton")
     user = userName.value
     phone = phoneNum.value
-    get(`/login?total=${encodeURIComponent(user + "," + phone)}`,{"name":user,"phone":phone})
+    get(`/login?total=${encodeURIComponent(user + "," + phone)}`)
     
 }

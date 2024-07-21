@@ -22,7 +22,7 @@ def openAiRequest(prompt, input):
     return chat_completion.choices[0].message.content
 
 @app.route('/savedata', methods=['POST'])
-def saveData(): # {"name": {"age": n, "steps": n, "location": n, "heartdisease": bool}}
+def saveData(): # {"name": {"age": n, "steps": n, "location": n, "heartdisease": bool,"lat":n,"long":n}}
     send = request.get_json()
     with open(userdataPath, 'r') as f:
         filedata = json.load(f)
@@ -52,6 +52,33 @@ def login():
             return jsonify({"status":"success"})
         return jsonify({"status":"wrong phone number"})
     return jsonify({"status":"wrong name"})
+
+
+
+
+@app.route('/leoLianLocator',methods=['GET'])
+def leoLianNeedsYourLocaitonForYourSaftey():
+    result = request.args.get('name')
+    with open(userdataPath,'r') as file:
+        data = json.load(file)
+    totalDict = {}
+    
+    lat,long = int(data[result]['lat']), int(data[result]['long'])
+    for key,value in data.items():
+        leoDistance = abs(int(value['lat']) - lat) + abs(int(value['long']) - long)
+        totalDict[leoDistance] = [key,value['location']]
+
+    sortedThing = dict(sorted(totalDict.items()))
+    first_five = list(sortedThing.items())[1:6]
+    out = {}
+    iterator = 0
+    for k in first_five:
+        out[k[0]] = k[1]
+        iterator+=1
+        if(iterator == 5):
+            break
+    return jsonify(out)
+
 
 if __name__ == '__main__':
     app.run()
