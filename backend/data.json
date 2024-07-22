@@ -1,3 +1,29 @@
 {
-    
+    "Donald Trump": {
+        "age": "100",
+        "steps": "6900",
+        "location": "6102, 147th Court Northeast, Sheffield Greens, Redmond, King County, Washington, 98052, United States",
+        "heartdisease": true,
+        "lat": 50.6616316,
+        "long": -121.1454163,
+        "phone": "222-222-2222"
+    },
+    "David Lin": {
+        "age": "69",
+        "steps": "6900",
+        "location": "13410, NE 80th St, Redmond, Washington, 98052, United States",
+        "heartdisease": true,
+        "lat": 51.6616316,
+        "long": -120.1454163,
+        "phone": "333-333-3333"
+    },
+    "Joe Biden": {
+        "age": "80",
+        "steps": "4621",
+        "location": "Hampton Greens apartment office, 4747, 148th Avenue Northeast, Bellevue, King County, Washington, 98007, United States",
+        "heartdisease": true,
+        "lat": 47.653244,
+        "long": -122.143611,
+        "phone": "111-111-1111"
+    }
 }
